@@ -5,6 +5,8 @@ package com.example.android.kebabsandregrets;
         import android.view.View;
         import android.widget.TextView;
 
+        import java.util.Random;
+
 public class MainActivity extends AppCompatActivity {
     int christofferKebabs = 0;
     int christofferRegrets = 0;
@@ -42,10 +44,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Increase the satisfaction score for Christoffer by 2 points, as plov is awesome and at least twice as good as a single kebab.
+     * Increase the satisfaction score for Christoffer. Plov is awesome, at least as good as kebab, but may surprise you.
+     * Therefore, the value of plov increases satisfaction by a random number from 1 to 5.
      */
     public void plovC(View v) {
-        christofferKebabs = christofferKebabs + 2;
+        int plov = new Random().nextInt(5 ) + 1;
+        christofferKebabs = christofferKebabs + plov;
         satisfactionChristoffer(christofferKebabs);
     }
 
@@ -84,10 +88,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Increase the satisfaction score for Patrick by 2 points, as plov is awesome and at least twice as good as a single kebab.
+     * Increase the satisfaction score for Patrick. Plov is awesome, at least as good as kebab, but may surprise you.
+     * Therefore, the value of plov increases satisfaction by a random number from 1 to 5.
      */
     public void plovP(View v) {
-        patrickKebabs = patrickKebabs + 2;
+        int plov = new Random().nextInt(5 ) + 1;
+        patrickKebabs = patrickKebabs + plov;
         satisfactionPatrick(patrickKebabs);
     }
 
